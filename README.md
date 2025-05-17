@@ -19,20 +19,20 @@ Responsável por interpretar o input fornecido pelo Product Owner e extrair os p
 
 Esse módulo transforma solicitações soltas em dados estruturados para alimentar os próximos agentes.
 
-2. ✍️ Gerador de User Story
+### 2. ✍️ Gerador de User Story
 Gera uma user story no formato padrão:
 
 Como [persona], quero [ação], para que [benefício]
 Foco em clareza, concisão e centralidade no usuário.
 
-3. ✅ Gerador de Critérios de Aceitação
+### 3. ✅ Gerador de Critérios de Aceitação
 A partir da user story, cria critérios objetivos e testáveis:
 
 Usa linguagem simples e clara
 
 Exemplo: Deve ser possível selecionar um intervalo de datas
 
-4. 🧪 Gerador de Cenários de Teste (BDD)
+### 4. 🧪 Gerador de Cenários de Teste (BDD)
 Converte os critérios de aceitação em cenários de teste no formato Gherkin (Given / When / Then):
 
 Cenário: Filtrar por data e categoria  
