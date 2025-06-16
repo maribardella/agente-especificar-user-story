@@ -40,3 +40,11 @@ Dado que o usuário acessa a tela de relatórios
 Quando seleciona uma data e uma categoria  
 Então os dados exibidos devem refletir os filtros aplicados  
 Compatível com ferramentas como Cucumber, Behave, SpecFlow, etc.
+
+---
+
+## 🌐 Interface Web
+
+Um exemplo simples de front-end foi adicionado em `web/` utilizando **HTML**, **TailwindCSS** e **JavaScript**. A página permite informar a chave da API do Google, descrever o contexto desejado e acionar a geração das user stories diretamente pelo navegador.
+
+Para utilizar, basta abrir o arquivo `web/index.html` em um navegador moderno, preencher os campos e clicar em **Gerar**.
