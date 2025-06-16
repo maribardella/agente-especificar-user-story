@@ -40,3 +40,18 @@ Dado que o usuário acessa a tela de relatórios
 Quando seleciona uma data e uma categoria  
 Então os dados exibidos devem refletir os filtros aplicados  
 Compatível com ferramentas como Cucumber, Behave, SpecFlow, etc.
+
+---
+
+## Executando com Streamlit
+
+1. Instale as dependências:
+   ```bash
+   pip install streamlit
+   ```
+2. Inicie a aplicação:
+   ```bash
+   streamlit run streamlit_app.py
+   ```
+
+Após executar, abra o navegador no endereço exibido no terminal para interagir com a interface web.
