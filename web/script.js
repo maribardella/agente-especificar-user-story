@@ -1,14 +1,28 @@
 async function callGemini(apiKey, messages) {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
+    // Use the stable v1 endpoint and send the API key via header
+    const url = 'https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent';
     const body = {
-        contents: messages.map(m => ({role: 'user', parts: [{text: m}]}))
+        contents: messages.map(m => ({ role: 'user', parts: [{ text: m }] }))
     };
+
     const res = await fetch(url, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+            'Content-Type': 'application/json',
+            'x-goog-api-key': apiKey
+        },
         body: JSON.stringify(body)
     });
-    if (!res.ok) throw new Error('API error');
+
+    if (!res.ok) {
+        let msg = `API error (${res.status})`;
+        try {
+            const errData = await res.json();
+            msg += `: ${errData.error?.message || JSON.stringify(errData)}`;
+        } catch { /* ignore */ }
+        throw new Error(msg);
+    }
+
     const data = await res.json();
     return data.candidates?.[0]?.content?.parts?.map(p => p.text).join('\n') || '';
 }

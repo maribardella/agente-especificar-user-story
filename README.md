@@ -48,3 +48,5 @@ Compatível com ferramentas como Cucumber, Behave, SpecFlow, etc.
 Um exemplo simples de front-end foi adicionado em `web/` utilizando **HTML**, **TailwindCSS** e **JavaScript**. A página permite informar a chave da API do Google, descrever o contexto desejado e acionar a geração das user stories diretamente pelo navegador.
 
 Para utilizar, basta abrir o arquivo `web/index.html` em um navegador moderno, preencher os campos e clicar em **Gerar**.
+
+O script utiliza a API do Gemini pela rota `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent` e envia a chave no cabeçalho `x-goog-api-key`.
