@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de User Stories com IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-4">
+    <div class="max-w-3xl w-full">
+        <h1 class="text-2xl font-bold mb-4 text-center">Gerador de User Stories</h1>
+        <div class="bg-white p-6 rounded shadow">
+            <div class="mb-4">
+                <label for="apiKey" class="block text-sm font-medium text-gray-700">Google API Key</label>
+                <input type="password" id="apiKey" class="mt-1 block w-full rounded border-gray-300" placeholder="Sua API Key">
+            </div>
+            <div class="mb-4">
+                <label for="context" class="block text-sm font-medium text-gray-700">Contexto</label>
+                <textarea id="context" rows="4" class="mt-1 block w-full rounded border-gray-300" placeholder="Descreva o contexto"></textarea>
+            </div>
+            <button id="generate" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Gerar</button>
+        </div>
+        <div id="output" class="mt-6 space-y-6"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
